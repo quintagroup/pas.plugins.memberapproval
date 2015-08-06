@@ -59,7 +59,7 @@ class MemberapprovalPlugin(UserManager):
 
     security.declarePrivate( 'userStatus' )
     def userStatus(self, user_id):
-        return self._activated_userid.get(user_id, None)
+        return self._activated_userid.get(user_id, True)
 
     security.declarePrivate( 'approveUser' )
     def approveUser(self, user_id):
